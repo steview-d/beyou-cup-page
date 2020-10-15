@@ -77,14 +77,13 @@ ul {
         @include flexbox;
 
         .side-padding {
-            background-color: lightslategray;
             flex: 1;
         }
 
         .cup-search-content-outer {
             overflow: hidden;
             flex: 0 1 600px;
-            min-height: 2000px;
+            min-height: 2500px;
 
             .cup-search-content-inner {
                 position: relative;

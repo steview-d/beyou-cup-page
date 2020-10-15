@@ -36,7 +36,6 @@ ul {
 }
 
 .menstrual-cup-search-page .cup-search-content .side-padding {
-  background-color: lightslategray;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -47,7 +46,7 @@ ul {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 600px;
           flex: 0 1 600px;
-  min-height: 2000px;
+  min-height: 2500px;
 }
 
 .menstrual-cup-search-page .cup-search-content .cup-search-content-outer .cup-search-content-inner {
