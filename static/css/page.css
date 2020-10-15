@@ -1,0 +1,595 @@
+/* ----- SETUP ----- */
+/* ----- Fonts ----- */
+@import url("https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+/* ----- Mixins ----- */
+/* ----- Vars ----- */
+/* ----- Defaults ----- */
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  margin: 0;
+}
+
+/* ----- END SETUP ----- */
+.menstrual-cup-search-page {
+  background-color: lightslategray;
+}
+
+.menstrual-cup-search-page .cup-search-header {
+  background-color: #f4c446;
+  padding: 40px 0;
+}
+
+.menstrual-cup-search-page .cup-search-header .page-width {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.menstrual-cup-search-page .cup-search-header .page-width .cup-search-header-outer {
+  text-align: center;
+}
+
+.menstrual-cup-search-page .cup-search-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menstrual-cup-search-page .cup-search-content .side-padding {
+  background-color: lightslategray;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menstrual-cup-search-page .cup-search-content .cup-search-content-outer {
+  overflow: hidden;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 600px;
+          flex: 0 1 600px;
+  min-height: 2000px;
+}
+
+.menstrual-cup-search-page .cup-search-content .cup-search-content-outer .cup-search-content-inner {
+  position: relative;
+  margin: 0 0 50px;
+}
+
+.menstrual-cup-search-page .cup-search-content .cup-search-content-outer .cup-search-content-inner .tr-anim {
+  -webkit-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+
+.menstrual-cup-search-page .cup-search-content .cup-search-content-outer .cup-search-content-inner .depth-one {
+  cursor: pointer;
+  background: #ffffff;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+}
+
+.menstrual-cup-search-page .cup-search-content .cup-search-content-outer .cup-search-content-inner .depth-one .depth-two {
+  cursor: pointer;
+  background: beige;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+
+.menstrual-cup-search-page .cup-search-content .cup-search-content-outer .cup-search-content-inner .depth-one .depth-two .depth-three {
+  cursor: pointer;
+  background: #ffffff;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+
+.menstrual-cup-search-page .d-1-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #e0fdff;
+  margin: 10px auto;
+}
+
+.menstrual-cup-search-page .d-1-container .d-1-text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 26px;
+}
+
+.menstrual-cup-search-page .d-1-container .d-1-text-wrapper h2 {
+  color: #45398e;
+  font-family: "Barlow", sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 42px;
+  margin: 6px 0 8px;
+  border-bottom: 1px solid #8ddae0;
+}
+
+.menstrual-cup-search-page .d-1-container .d-1-text-wrapper p {
+  color: #1c1c1c;
+  font-family: "Muli", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0 0 17px;
+}
+
+.menstrual-cup-search-page .d-1-container .d-1-img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto 30px;
+}
+
+.menstrual-cup-search-page .d-2-container-header {
+  background-color: #8ddae0;
+}
+
+.menstrual-cup-search-page .d-2-container-header .d-2-header-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menstrual-cup-search-page .d-2-container-header .d-2-header-title-container .title-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 25px;
+}
+
+.menstrual-cup-search-page .d-2-container-header .d-2-header-title-container .title-text h2 {
+  color: #45398e;
+  font-family: "Barlow", sans-serif;
+  font-size: 37px;
+  font-weight: 800;
+  line-height: 42px;
+  margin: 11px 0 15px;
+}
+
+.menstrual-cup-search-page .d-2-container-header .d-2-header-title-container .title-back-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 44px;
+  color: #ffffff;
+  margin: auto 20px;
+}
+
+.menstrual-cup-search-page .d-2-container-header .d-2-header-subtitle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #00a2b0;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+.menstrual-cup-search-page .d-2-container-header .d-2-header-subtitle-container .info-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 26px;
+  color: #ffffff;
+  margin: auto 13px auto 25px;
+}
+
+.menstrual-cup-search-page .d-2-container-header .d-2-header-subtitle-container .subtitle-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 20px;
+}
+
+.menstrual-cup-search-page .d-2-container-header .d-2-header-subtitle-container .subtitle-text p {
+  font-family: "Muli", sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 13px;
+  margin: 0;
+}
+
+.menstrual-cup-search-page .d-2-container-question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e0fdff;
+  min-height: 90px;
+  border-bottom: 2px solid #00a2b0;
+}
+
+.menstrual-cup-search-page .d-2-container-question .question-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 32px;
+}
+
+.menstrual-cup-search-page .d-2-container-question .question-text h4 {
+  color: #202020;
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 22px;
+  margin: 0;
+  max-width: 240px;
+}
+
+.menstrual-cup-search-page .d-2-container-question .question-arrow {
+  font-size: 29px;
+  color: #000000;
+  margin: auto 28px auto;
+}
+
+.menstrual-cup-search-page .d-3-container-back {
+  background-color: #effcfb;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.19);
+  padding: 12px 30px 20px;
+  border-top: 1px solid #29a69c;
+}
+
+.menstrual-cup-search-page .d-3-container-back .back-sub-header {
+  border-bottom: 1px solid #29a69c;
+  padding-bottom: 9px;
+}
+
+.menstrual-cup-search-page .d-3-container-back .back-sub-header i {
+  color: #237972;
+  font-size: 16px;
+}
+
+.menstrual-cup-search-page .d-3-container-back .back-sub-header span {
+  color: #237972;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 10px;
+}
+
+.menstrual-cup-search-page .d-3-container-back h4 {
+  color: #000000;
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 26px 0 10px;
+}
+
+.menstrual-cup-search-page .answer-container {
+  padding: 0 40px;
+}
+
+.menstrual-cup-search-page .answer-container .diagram-container {
+  padding: 24px 0 27px;
+}
+
+.menstrual-cup-search-page .answer-container .diagram-container img {
+  width: 100%;
+}
+
+.menstrual-cup-search-page .answer-container .text-container p {
+  color: #5e5967;
+  font-family: "Karla", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+.menstrual-cup-search-page .answer-container .science-container {
+  border: 1px solid #29a69c;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2px 16px 2px 10px;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-title .science-title-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-title .science-title-text svg {
+  fill: #fa9100;
+  height: 24px;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-title .science-title-text span {
+  color: #4f387d;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+  padding-left: 6px;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-title .science-title-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  color: #fa9100;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-title .science-title-arrow .icon-anim {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-content {
+  padding: 0 16px;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-content .science-content-inner {
+  padding: 0 0 20px;
+  border-top: 1px solid #29a69c;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-content .science-content-inner h5 {
+  color: #4f387d;
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 20px 0 0;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-content .science-content-inner h5 span {
+  font-weight: 400;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-content .science-content-inner p {
+  color: #000000;
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 16px;
+}
+
+.menstrual-cup-search-page .answer-container .science-container .science-content .science-content-inner .science-img-container img {
+  width: 100%;
+}
+
+.menstrual-cup-search-page .answer-container .share-container {
+  padding-top: 12px;
+}
+
+.menstrual-cup-search-page .answer-container .share-container .share-container-inner {
+  border-top: 1px solid #29a69c;
+}
+
+.menstrual-cup-search-page .answer-container .share-container .share-container-inner h6 {
+  color: #4f387d;
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  padding: 17px 0 12px;
+  margin: 0;
+}
+
+.menstrual-cup-search-page .answer-container .share-container .share-container-inner .share-icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 34px;
+}
+
+.menstrual-cup-search-page .related-questions-container {
+  background-color: #effcfb;
+  padding: 34px 28px 64px;
+}
+
+.menstrual-cup-search-page .related-questions-container h6 {
+  color: #09645d;
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 0 22px;
+}
+
+.menstrual-cup-search-page .related-questions-container .related-question:nth-child(2) {
+  border-top: 1px solid #00a2b0;
+}
+
+.menstrual-cup-search-page .related-questions-container .related-question .question-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #00a2b0;
+}
+
+.menstrual-cup-search-page .related-questions-container .related-question .question-container .question-text p {
+  color: #09645d;
+  font-family: "Karla", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  width: 230px;
+  margin: 14px 0 13px;
+}
+
+.menstrual-cup-search-page .related-questions-container .related-question .question-container .question-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menstrual-cup-search-page .related-questions-container .related-question .question-container .question-icons .icon-media-type {
+  width: 41px;
+}
+
+.menstrual-cup-search-page .related-questions-container .related-question .question-container .question-icons .icon-media-type img {
+  display: block;
+  height: 24px;
+  margin: auto;
+}
+
+.menstrual-cup-search-page .related-questions-container .related-question .question-container .question-icons .icon-arrow img {
+  display: block;
+  height: 24px;
+  margin-right: -6px;
+  padding-left: 8px;
+}
+
+.menstrual-cup-search-page .cup-product-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #ffcc28;
+  padding: 10px 12px 0 34px;
+}
+
+.menstrual-cup-search-page .cup-product-container .product-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.menstrual-cup-search-page .cup-product-container .product-text-container h5 {
+  color: #ffffff;
+  font-family: "Barlow", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 26px;
+  margin: 10px 0 10px;
+}
+
+.menstrual-cup-search-page .cup-product-container .product-text-container p {
+  color: #602b00;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0 0 16px;
+}
+
+.menstrual-cup-search-page .cup-product-container .product-text-container .btn-shop-now {
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Barlow", sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 105px;
+  padding: 4px 0 6px;
+  -webkit-box-shadow: -2px -2px 4px 0 rgba(255, 255, 255, 0.5), 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: -2px -2px 4px 0 rgba(255, 255, 255, 0.5), 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.menstrual-cup-search-page .cup-product-container .product-image-container img {
+  width: 160px;
+}
+
+.v-hide {
+  display: none;
+}
+
+.no-border-bottom {
+  border-bottom: none;
+}
+
+.rotate-180 {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+/*# sourceMappingURL=page.css.map */
