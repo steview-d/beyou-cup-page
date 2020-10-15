@@ -73,21 +73,6 @@ ul {
 .menstrual-cup-search-page {
     background-color: lightslategray;
 
-    .cup-search-header {
-        background-color: $yellow;
-        padding: 40px 0;
-
-        .page-width {
-            width: 100%;
-            max-width: 1200px;
-            padding: 0;
-
-            .cup-search-header-outer {
-                text-align: center;
-            }
-        }
-    }
-
     .cup-search-content {
         @include flexbox;
 
@@ -110,22 +95,75 @@ ul {
                 }
 
                 .depth-one {
-                    cursor: pointer;
-                    background: $white;
+                    background: #effcfb;
                     width: 100%;
                     position: absolute;
                     left: 0%;
 
+                    li:nth-child(2) {
+                        .d-1-container-inner {
+                            border-top: none;
+                            margin-top: 6px;
+                        }
+                    }
+
+                    li:last-child {
+                        margin-bottom: 7px;
+                    }
+
+                    .d-1-section-title {
+                        .title-img-container {
+                            img {
+                                display: block;
+                            }
+                        }
+                        .title-text-container {
+                            padding: 22px 28px;
+                            background-color: #29a69c;
+
+                            h2 {
+                                color: $white;
+                                font-family: $barlow;
+                                font-size: 28px;
+                                font-weight: 800;
+                                line-height: 42px;
+                                margin: 0;
+                            }
+
+                            p {
+                                color: $white;
+                                font-family: $karla;
+                                font-size: 13px;
+                                line-height: 18px;
+                                font-weight: normal;
+                                margin: 0;
+                            }
+                        }
+                    }
+
                     .depth-two {
-                        cursor: pointer;
-                        background: beige;
                         width: 100%;
                         position: absolute;
                         top: 0%;
                         left: 100%;
 
+                        li:nth-child(2) {
+                            .d-2-container-question {
+                                padding-top:14px;
+                            }
+                        }
+
+                        li:nth-last-child(2) {
+                            .d-2-container-question {
+                                padding-bottom:14px;
+
+                                .question-container {
+                                    border:none;
+                                }
+                            }
+                        }
+
                         .depth-three {
-                            cursor: pointer;
                             background: $white;
                             width: 100%;
 
@@ -141,144 +179,104 @@ ul {
 
     // specific css for item containers
     .d-1-container {
-        @include flexbox;
+        padding: 0 28px;
 
-        width: 100%;
-        background-color: #e0fdff;
-        margin: 10px auto;
+        .d-1-container-inner {
+            border-top: 1px solid #29a69c;
 
-        .d-1-text-wrapper {
             @include flexbox;
-            flex-direction: column;
-            flex: 1 1 auto;
+            width: 100%;
+            background-color: #effcfb;
+            padding: 10px 0 20px;
 
-            margin-left: 26px;
+            .d-1-text-wrapper {
+                @include flexbox;
+                flex-direction: column;
+                flex: 1 1 auto;
 
-            h2 {
-                color: #45398e;
-                font-family: $barlow;
-                font-size: 25px;
-                font-weight: 800;
-                line-height: 42px;
-                margin: 6px 0 8px;
-                border-bottom: 1px solid #8ddae0;
+                h2 {
+                    color: #09645d;
+                    font-family: $barlow;
+                    font-size: 24px;
+                    font-weight: 800;
+                    line-height: 42px;
+                    margin: 0 0 -4px;
+                }
+
+                p {
+                    color: #5e5967;
+                    font-family: $muli;
+                    font-size: 13px;
+                    font-weight: normal;
+                    line-height: 18px;
+                    margin: 0;
+                }
             }
 
-            p {
-                color: #1c1c1c;
-                font-family: $muli;
-                font-size: 13px;
-                line-height: 15px;
-                margin: 0 0 17px;
+            .d-1-icon-wrapper {
+                @include flexbox;
+                justify-content: right;
+                align-items: center;
+                margin: auto;
+                margin-right: -12px;
+
+                img {
+                    height: 32px;
+                    padding-left: 20px;
+                }
             }
-        }
-
-        .d-1-img-wrapper {
-            @include flexbox;
-            justify-content: right;
-            align-items: center;
-
-            margin: auto 30px;
         }
     }
 
     .d-2-container-header {
-        background-color: #8ddae0;
+        background-color: #29a69c;
+        padding: 14px 28px 18px;
+        
 
-        .d-2-header-title-container {
-            @include flexbox;
+        .d-2-container-inner {
+            .back-wrapper {
+                padding-bottom: 6px;
+                border-bottom: 1px solid $white;
 
-            .title-text {
-                flex: 1 1 auto;
-                padding-left: 25px;
+                i {
+                    font-size: 20px;
+                    color: $white;
+                    vertical-align: middle;
+                    padding-right: 12px;
+                }
 
-                h2 {
-                    color: #45398e;
-                    font-family: $barlow;
-                    font-size: 37px;
-                    font-weight: 800;
-                    line-height: 42px;
-                    margin: 11px 0 15px;
+                span {
+                    color: $white;
+                    font-family: $karla;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 24px;
                 }
             }
 
-            .title-back-icon {
-                @include flexbox;
-                justify-content: center;
-                align-items: center;
-
-                font-size: 44px;
+            h4 {
                 color: $white;
-                margin: auto 20px;
-            }
-        }
-
-        .d-2-header-subtitle-container {
-            @include flexbox;
-
-            background-color: #00a2b0;
-            color: $white;
-            padding: 10px 0;
-
-            .info-icon {
-                @include flexbox;
-                justify-content: center;
-                align-items: center;
-
-                font-size: 26px;
-                color: $white;
-                margin: auto 13px auto 25px;
+                font-family: $barlow;
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 24px;
+                margin: 16px 0 0;
             }
 
-            .subtitle-text {
-                @include flexbox;
-                flex: 1 1 auto;
-                align-items: center;
-
-                padding-right: 20px;
-
-                p {
-                    font-family: $muli;
-                    font-size: 13px;
-                    font-style: italic;
-                    font-weight: 600;
-                    line-height: 13px;
-                    margin: 0;
-                }
+            p {
+                color: $white;
+                font-family: $karla;
+                font-size: 13px;
+                font-weight: normal;
+                line-height: 18px;
+                margin: 10px 0 0;
             }
         }
     }
 
     .d-2-container-question {
-        @include flexbox;
-        background-color: #e0fdff;
-        min-height: 90px;
-
-        border-bottom: 2px solid #00a2b0;
-
-        .question-text {
-            @include flexbox;
-            align-items: center;
-            flex: 1 1 auto;
-
-            padding-left: 32px;
-
-            h4 {
-                color: #202020;
-                font-family: $muli;
-                font-size: 15px;
-                font-weight: bold;
-                line-height: 22px;
-                margin: 0;
-                max-width: 240px;
-            }
-        }
-
-        .question-arrow {
-            font-size: 29px;
-            color: $black;
-            margin: auto 28px auto;
-        }
+        background-color: #EFFCFB;
+        padding:0 28px;
     }
 
     .d-3-container-back {
@@ -527,71 +525,71 @@ ul {
             &:nth-child(2) {
                 border-top: 1px solid #00a2b0;
             }
+        }
+    }
 
-            .question-container {
-                @include flexbox;
-                justify-content: space-between;
+    .question-container {
+        @include flexbox;
+        justify-content: space-between;
+
+        @media screen and (min-width: 600px) {
+            min-height: 75px;
+        }
+
+        border-bottom: 1px solid #00a2b0;
+
+        .question-text {
+            margin: auto 0;
+
+            p {
+                color: #09645d;
+                font-family: $karla;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 20px;
+                margin: 14px 0 13px;
 
                 @media screen and (min-width: 600px) {
-                    min-height: 75px;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .question-icons {
+            @include flexbox;
+            justify-content: right;
+            align-items: center;
+            padding-left: 20px;
+
+            .icon-media-type {
+                width: 41px;
+
+                @media screen and (min-width: 600px) {
+                    width: 51px;
                 }
 
-                border-bottom: 1px solid #00a2b0;
+                img {
+                    display: block;
+                    height: 24px;
+                    margin: auto;
 
-                .question-text {
-                    margin: auto 0;
-
-                    p {
-                        color: #09645d;
-                        font-family: $karla;
-                        font-size: 15px;
-                        font-weight: bold;
-                        line-height: 20px;
-                        margin: 14px 0 13px;
-
-                        @media screen and (min-width: 600px) {
-                            font-size: 18px;
-                            line-height: 24px;
-                        }
+                    @media screen and (min-width: 600px) {
+                        height: 30px;
                     }
                 }
+            }
 
-                .question-icons {
-                    @include flexbox;
-                    justify-content: right;
-                    align-items: center;
-                    padding-left: 20px;
+            .icon-arrow {
+                img {
+                    display: block;
+                    height: 24px;
+                    margin-right: -6px;
+                    padding-left: 8px;
 
-                    .icon-media-type {
-                        width: 41px;
-
-                        @media screen and (min-width: 600px) {
-                            width: 51px;
-                        }
-
-                        img {
-                            display: block;
-                            height: 24px;
-                            margin: auto;
-
-                            @media screen and (min-width: 600px) {
-                                height: 30px;
-                            }
-                        }
-                    }
-
-                    .icon-arrow {
-                        img {
-                            display: block;
-                            height: 24px;
-                            margin-right: -6px;
-                            padding-left: 8px;
-
-                            @media screen and (min-width: 600px) {
-                                height: 30px;
-                                padding-left: 10px;
-                            }
-                        }
+                    @media screen and (min-width: 600px) {
+                        height: 30px;
+                        padding-left: 10px;
                     }
                 }
             }
@@ -603,7 +601,7 @@ ul {
         justify-content: space-around;
 
         background-color: #ffcc28;
-        padding: 10px 12px 0 34px;
+        padding: 12px 12px 0 34px;
 
         @media screen and (min-width: 600px) {
             padding: 18px 24px 2px 50px;
@@ -620,7 +618,7 @@ ul {
                 font-size: 26px;
                 font-weight: 800;
                 line-height: 26px;
-                margin: 10px 0 10px;
+                margin: 12px 0 10px;
 
                 @media screen and (min-width: 600px) {
                     font-size: 32px;
@@ -688,4 +686,12 @@ ul {
 
 .rotate-180 {
     @include transform(rotate(-180deg));
+}
+
+.btn-fwd,
+.btn-bck,
+.science-title,
+.share-icon,
+.related-question {
+    cursor: pointer;
 }
