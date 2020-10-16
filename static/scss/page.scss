@@ -91,11 +91,9 @@ ul {
 
 /* ----- END SETUP ----- */
 
-
 /* ----- Main Content ----- */
 .menstrual-cup-search-page {
     background-color: lightslategray;
-
 
     // PAGE STRUCTURE
     /*
@@ -149,16 +147,16 @@ ul {
 
                         li:nth-child(2) {
                             .d-2-container-question {
-                                padding-top:14px;
+                                padding-top: 14px;
                             }
                         }
 
                         li:nth-last-child(2) {
                             .d-2-container-question {
-                                padding-bottom:14px;
+                                padding-bottom: 14px;
 
                                 .question-container {
-                                    border:none;
+                                    border: none;
                                 }
                             }
                         }
@@ -261,7 +259,6 @@ ul {
     .d-2-container-header {
         background-color: #29a69c;
         padding: 14px 28px 18px;
-        
 
         .d-2-container-inner {
             .back-wrapper {
@@ -305,8 +302,8 @@ ul {
     }
 
     .d-2-container-question {
-        background-color: #EFFCFB;
-        padding:0 28px;
+        background-color: #effcfb;
+        padding: 0 28px;
     }
 
     .d-3-container-back {
@@ -374,6 +371,40 @@ ul {
                     font-size: 18px;
                     line-height: 26px;
                 }
+
+                a {
+                    color:$green;
+                    @include transition(all, .2s, ease);
+
+                    &:hover {
+                        opacity:.7;
+                    }
+                }
+            }
+
+            ul {
+                list-style-type: square;
+                padding-inline-start: 18px;
+                margin: 0 0 24px;
+
+                li {
+                    display: list-item;
+                    color: #5e5967;
+                    font-family: $karla;
+                    font-size: 15px;
+                    line-height: 18px;
+                    font-weight: normal;
+                    margin: 0 0 8px;
+
+                    @media screen and (min-width: 600px) {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            &:first-child {
+                margin-top:24px;
             }
         }
 

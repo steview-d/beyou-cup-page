@@ -266,7 +266,7 @@ ul {
 }
 
 .menstrual-cup-search-page .d-2-container-question {
-  background-color: #EFFCFB;
+  background-color: #effcfb;
   padding: 0 28px;
 }
 
@@ -359,6 +359,44 @@ ul {
     font-size: 18px;
     line-height: 26px;
   }
+}
+
+.menstrual-cup-search-page .answer-container .text-container p a {
+  color: #29a69c;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.menstrual-cup-search-page .answer-container .text-container p a:hover {
+  opacity: .7;
+}
+
+.menstrual-cup-search-page .answer-container .text-container ul {
+  list-style-type: square;
+  -webkit-padding-start: 18px;
+          padding-inline-start: 18px;
+  margin: 0 0 24px;
+}
+
+.menstrual-cup-search-page .answer-container .text-container ul li {
+  display: list-item;
+  color: #5e5967;
+  font-family: "Karla", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  margin: 0 0 8px;
+}
+
+@media screen and (min-width: 600px) {
+  .menstrual-cup-search-page .answer-container .text-container ul li {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.menstrual-cup-search-page .answer-container .text-container:first-child {
+  margin-top: 24px;
 }
 
 .menstrual-cup-search-page .answer-container .science-container {
