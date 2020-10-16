@@ -308,6 +308,25 @@ ul {
 
 .menstrual-cup-search-page .answer-container {
   padding: 0 40px;
+  /* VIDEO CONTAINER STYLE STRUCTURE
+        .video-container {
+            .video-content {
+            }
+
+            .transcript-outer {
+                .transcript-title-wrapper {
+                    h6 {
+                    }
+
+                    img {
+                    }
+                }
+
+                .transcript-content-wrapper {
+                }
+            }
+        }
+        */
 }
 
 .menstrual-cup-search-page .answer-container .diagram-container {
