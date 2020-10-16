@@ -68,11 +68,42 @@ ul {
     margin: 0;
 }
 
+/* ----- Helpers ----- */
+.v-hide {
+    display: none;
+}
+
+.no-border-bottom {
+    border-bottom: none;
+}
+
+.rotate-180 {
+    @include transform(rotate(-180deg));
+}
+
+.btn-fwd,
+.btn-bck,
+.science-title,
+.share-icon,
+.related-question {
+    cursor: pointer;
+}
+
 /* ----- END SETUP ----- */
 
+
+/* ----- Main Content ----- */
 .menstrual-cup-search-page {
     background-color: lightslategray;
 
+
+    // PAGE STRUCTURE
+    /*
+        This block is used to add a 3 tier structure to the
+        nested HTML content.
+        The 'nth-child' sections are not a part of this, but are
+        here as it's the best place for them. For now.
+    */
     .cup-search-content {
         @include flexbox;
 
@@ -108,36 +139,6 @@ ul {
 
                     li:last-child {
                         margin-bottom: 7px;
-                    }
-
-                    .d-1-section-title {
-                        .title-img-container {
-                            img {
-                                display: block;
-                            }
-                        }
-                        .title-text-container {
-                            padding: 22px 28px;
-                            background-color: #29a69c;
-
-                            h2 {
-                                color: $white;
-                                font-family: $barlow;
-                                font-size: 28px;
-                                font-weight: 800;
-                                line-height: 42px;
-                                margin: 0;
-                            }
-
-                            p {
-                                color: $white;
-                                font-family: $karla;
-                                font-size: 13px;
-                                line-height: 18px;
-                                font-weight: normal;
-                                margin: 0;
-                            }
-                        }
                     }
 
                     .depth-two {
@@ -176,7 +177,7 @@ ul {
         }
     }
 
-    // specific css for item containers
+    // Individual container style blocks
     .d-1-container {
         padding: 0 28px;
 
@@ -223,6 +224,36 @@ ul {
                     height: 32px;
                     padding-left: 20px;
                 }
+            }
+        }
+    }
+
+    .d-1-section-title {
+        .title-img-container {
+            img {
+                display: block;
+            }
+        }
+        .title-text-container {
+            padding: 22px 28px;
+            background-color: #29a69c;
+
+            h2 {
+                color: $white;
+                font-family: $barlow;
+                font-size: 28px;
+                font-weight: 800;
+                line-height: 42px;
+                margin: 0;
+            }
+
+            p {
+                color: $white;
+                font-family: $karla;
+                font-size: 13px;
+                line-height: 18px;
+                font-weight: normal;
+                margin: 0;
             }
         }
     }
@@ -673,24 +704,4 @@ ul {
             }
         }
     }
-}
-
-.v-hide {
-    display: none;
-}
-
-.no-border-bottom {
-    border-bottom: none;
-}
-
-.rotate-180 {
-    @include transform(rotate(-180deg));
-}
-
-.btn-fwd,
-.btn-bck,
-.science-title,
-.share-icon,
-.related-question {
-    cursor: pointer;
 }
