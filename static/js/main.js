@@ -68,3 +68,11 @@ $('.science-title').click(function() {
     $(this).next().slideToggle();
     $(this).find('.icon-arrow').toggleClass('rotate-180');
 })
+
+function relatedQuestionBtn (el) {
+    let targetId = el.dataset.dest;
+    var foo = $(el).closest('.depth-three');
+    $(foo).toggleClass('v-hide');
+    $('.cup-search-content-inner').find('#' + targetId).toggleClass('v-hide');
+    window.scrollTo(0, 0);
+}
