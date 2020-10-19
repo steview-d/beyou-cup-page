@@ -69,10 +69,12 @@ $('.science-title').click(function() {
     $(this).find('.icon-arrow').toggleClass('rotate-180');
 })
 
-function relatedQuestionBtn (el) {
-    let targetId = el.dataset.dest;
-    var foo = $(el).closest('.depth-three');
-    $(foo).toggleClass('v-hide');
-    $('.cup-search-content-inner').find('#' + targetId).toggleClass('v-hide');
+// Navigate to new question from a 'related question' link
+$('.related-question').click(function() {
+    let targetId = this.dataset.dest;
+    let content = $('.cup-search-content-inner')
+    let answerContainer = $(this).closest('.depth-three');
+    $(answerContainer).toggleClass('v-hide');
+    content.find('#' + targetId).toggleClass('v-hide');
     window.scrollTo(0, 0);
-}
+})
