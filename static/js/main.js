@@ -90,9 +90,14 @@ if (directLink && $(answerId).length) {
     answerElement.closest('.depth-two').toggleClass('v-hide');
     answerElement.toggleClass('v-hide');
     // shift the elements over to bring into view
-    par_el.css('left', '-200%');
+    current_pos -= 200;
+    par_el.css('left', current_pos + '%');
 }
 
 // Build links for share icons - build dynamically when clicked
 // rather than within html or a script that runs on page load,
 // as there will be almost 800 links....!
+
+$('.share-icon').click(function() {
+    console.log("hgvjbkl")
+})
