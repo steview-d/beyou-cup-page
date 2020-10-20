@@ -79,7 +79,6 @@ $('.related-question').click(function () {
     window.scrollTo(0, 0);
 });
 
-
 const answerId = '#' + window.location.hash.substr(1);
 const directLink = answerId.includes('q');
 
@@ -98,6 +97,51 @@ if (directLink && $(answerId).length) {
 // rather than within html or a script that runs on page load,
 // as there will be almost 800 links....!
 
-$('.share-icon').click(function() {
-    console.log("hgvjbkl")
-})
+// $('.share-icon').click(function () {
+//     let pageUrl = 'http://127.0.0.1:5500/';
+//     let question = $(this).closest('.depth-three').find('h4').text().toLowerCase();
+//     let answer = $(this).closest('.depth-three').attr('id');
+//     let foo = encodeURIComponent(`${question}#${answer}`.trim());
+//     console.log(foo)
+    
+
+//     switch (this.className.split(' ')[1]) {
+//         case 'share-fb':
+//             console.log('facebook');
+//             let fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?';
+//             let url = `${fbShareUrl}u=${pageUrl}#${answer}`
+//             console.log(url);
+//             // window.open(url, '_blank');
+//             break;
+//         case 'share-tw':
+//             console.log('twitter');
+//             break;
+//         case 'share-pn':
+//             console.log('pinterest');
+//             break;
+//         case 'share-wa':
+//             console.log('whatsapp');
+//             break;
+//     }
+// });
+
+// https://www.facebook.com/sharer/sharer.php?
+// t=this%20is%20a%20title&
+// u=http%3A//127.0.0.1%3A5500/index.html%23q2
+
+// https://www.facebook.com/sharer.php?
+// t=Fitness%20and%20your%20period%3A%20how%20to%20fit%20it%20all%20in&u=https%3A%2F%2Fbeyouonline.co.uk%2Fblogs%2Fnews%2Ffitness-and-your-period-how-to-fit-it-all-in
+
+// https://www.facebook.com/sharer/sharer.php?
+// u=http%3A%2F%2F127.0.0.1:5500/#q2
+
+// https://www.facebook.com/sharer.php?t=Cup%20Search&u=http%3A%2F%2F127.0.0.1%3A5500%2Findex.html%23q8
+
+// if using a share app or something, need to find a way for it to
+// include anchors
+
+// maybe when showing an answer, the window.url or whatever is
+// updated with the anchor?
+
+// when navigating through / around, will need to keep track and
+// update as required.
