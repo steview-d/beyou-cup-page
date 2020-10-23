@@ -7,9 +7,8 @@ $(document).ready(function () {
     const heightContainer = $('.cup-search-content-outer');
     const depthOneHeight = 1070;
 
-    eee = $('.depth-one').height();
-    console.log(eee);
-    heightContainer.css('min-height', eee);
+    initialHeight = $('.depth-one').height();
+    heightContainer.css('min-height', initialHeight);
 
     const answerId = '#' + window.location.hash.substr(1);
     const directLink = answerId.includes('q');
@@ -150,54 +149,45 @@ $(document).ready(function () {
     }
 });
 
+
+
 // Build links for share icons - build dynamically when clicked
-// rather than within html or a script that runs on page load,
-// as there will be almost 800 links....!
 
-// $('.share-icon').click(function () {
-//     let pageUrl = 'http://127.0.0.1:5500/';
-//     let question = $(this).closest('.depth-three').find('h4').text().toLowerCase();
-//     let answer = $(this).closest('.depth-three').attr('id');
-//     let foo = encodeURIComponent(`${question}#${answer}`.trim());
-//     console.log(foo)
+$('.share-icon').click(function () {
+    let pageUrl = 'https://beyouonline.co.uk/pages/menstrual-cup-search';
+    let answer = $(this).closest('.depth-three').attr('id');
+    let question = $(this).closest('.depth-three').find('h4').text();
+    let qUrl = encodeURIComponent(`${pageUrl}#${answer}`.trim());
+    let qText = encodeURIComponent(`${question}`.trim());
+    let shareMedia = encodeURIComponent('https://cdn.shopify.com/s/files/1/0004/9659/9091/products/Menstrual_Cup_-_Main_Image-womenshealth3_b7325c0e-bebc-43e9-9a77-edfc184f2779.jpg?v=1588437734'.trim());
 
-//     switch (this.className.split(' ')[1]) {
-//         case 'share-fb':
-//             console.log('facebook');
-//             let fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?';
-//             let url = `${fbShareUrl}u=${pageUrl}#${answer}`
-//             console.log(url);
-//             // window.open(url, '_blank');
-//             break;
-//         case 'share-tw':
-//             console.log('twitter');
-//             break;
-//         case 'share-pn':
-//             console.log('pinterest');
-//             break;
-//         case 'share-wa':
-//             console.log('whatsapp');
-//             break;
-//     }
-// });
+    switch (this.className.split(' ')[1]) {
+        case 'share-fb':
+            let fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?';
+            var url = `${fbShareUrl}u=${qUrl}&t=${qText}`
+            window.open(url, '_blank');
+            break;
+        case 'share-tw':
+            let twShareUrl = 'https://twitter.com/intent/tweet?'
+            var url = `${twShareUrl}text=${qText}?%0D%0A${qUrl}`
+            window.open(url, '_blank');
+            break;
+        case 'share-pn':
+            console.log(url)
+            PinUtils.pinOne({
+                'url': qUrl,
+                'description': qText,
+                'media': shareMedia
+             });
+            break;
+        case 'share-wa':
+            let waShareUrl = 'https://wa.me/?';
+            var url = `${waShareUrl}text=${qText}? ${qUrl}`
+            window.open(url, '_blank');
+            break;
+    }
+});
 
-// https://www.facebook.com/sharer/sharer.php?
-// t=this%20is%20a%20title&
-// u=http%3A//127.0.0.1%3A5500/index.html%23q2
 
-// https://www.facebook.com/sharer.php?
-// t=Fitness%20and%20your%20period%3A%20how%20to%20fit%20it%20all%20in&u=https%3A%2F%2Fbeyouonline.co.uk%2Fblogs%2Fnews%2Ffitness-and-your-period-how-to-fit-it-all-in
+// https://wa.me/?text=urlencodedtext
 
-// https://www.facebook.com/sharer/sharer.php?
-// u=http%3A%2F%2F127.0.0.1:5500/#q2
-
-// https://www.facebook.com/sharer.php?t=Cup%20Search&u=http%3A%2F%2F127.0.0.1%3A5500%2Findex.html%23q8
-
-// if using a share app or something, need to find a way for it to
-// include anchors
-
-// maybe when showing an answer, the window.url or whatever is
-// updated with the anchor?
-
-// when navigating through / around, will need to keep track and
-// update as required.
